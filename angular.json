@@ -125,6 +125,10 @@
               "devServerTarget": "infinite-shape-ui:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
