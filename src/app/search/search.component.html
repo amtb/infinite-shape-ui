@@ -16,10 +16,15 @@
         type="number"
         formControlName="heigth"
         placeholder="Height">
+      <mat-hint>Even and greater than 20</mat-hint>
     </mat-form-field>
   
     <mat-form-field>
-      <input formControlName="padding" matInput placeholder="Padding">
+      <input
+        matInput
+        formControlName="padding"
+        placeholder="Padding">
+      <mat-hint>Even and greater than 4</mat-hint>
     </mat-form-field>
   
     <button mat-button type="submit" color="primary">Search</button>

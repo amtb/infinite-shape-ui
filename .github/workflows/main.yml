@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on: [push]
 
@@ -9,12 +9,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install
+    - name: Install dependencies
       run: yarn
-    - name: Deploy
+    - name: Lint and test
       run: |
-        yarn run ng deploy --name="Alpha Barry" --email=alpha.mt.barry@gmail.com
-        echo test, and deploy your project.
+        yarn run lint
+        # yarn run test
+    - name: Builds
+      run: |
+        yarn run build --prod
+    - name: Gh pages deploy
+      # TODO: run only on master branch
       env:
         CI: true
-        GH_TOKEN: ${{secrets.GH_TOKEN}}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        yarn run deploy
