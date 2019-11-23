@@ -11,7 +11,10 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install
       run: yarn
-    - name: Run a multi-line script
+    - name: Deploy
       run: |
-        echo Add other actions to build,
+        yarn run ng deploy --name="Alpha Barry" --email=alpha.mt.barry@gmail.com
         echo test, and deploy your project.
+      env:
+        CI: true
+        GH_TOKEN: ${{secrets.GH_TOKEN}}
