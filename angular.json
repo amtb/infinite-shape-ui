@@ -129,6 +129,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
+            "name": "Alpha Barry",
+            "email": "alpha.mt.barry@gmail.com",
             "baseHref": "/infinite-shape-ui/"
           }
         }
