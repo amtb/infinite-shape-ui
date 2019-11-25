@@ -1,1 +1,18 @@
-<p>{{shape | json}}</p>
+<div>
+  <span *ngFor="let line of shape">
+    <mat-icon *ngFor="let pixel of line"
+      color="primary"
+      [ngClass]="{'hidden': isBlank(pixel)}">
+      {{draw(pixel)}}
+    </mat-icon>
+    <br/>
+  </span>
+</div>
+<div class="icon-picker">
+  <span>Pick an icon:</span>
+  <mat-icon *ngFor="let icon of icons"
+    color="primary"
+    (click)="selectIcon(icon)">
+    {{icon}}
+  </mat-icon>
+</div>
