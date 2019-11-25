@@ -1,9 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppComponent } from './app.component';
 import { SearchModule } from './search/search.module';
+import { ShapeModule } from './shape/shape.module';
 
 @NgModule({
   declarations: [
@@ -11,8 +12,10 @@ import { SearchModule } from './search/search.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
-    SearchModule
+    SearchModule,
+    ShapeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
