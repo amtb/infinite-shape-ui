@@ -1,6 +1,6 @@
 # InfiniteShapeUi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+UI is available at https://amtb.github.io/infinite-shape-ui/
 
 ## Development server
 
