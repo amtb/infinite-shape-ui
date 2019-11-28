@@ -12,7 +12,7 @@ describe('Form validators', () => {
       expect(evenValidator(control)).toEqual({even: {valid: false}});
 
       control.setValue('3');
-      expect(evenValidator(control)).toBe({even: {valid: false}})
+      expect(evenValidator(control)).toBe({even: {valid: false}});
     });
 
     it('should be even', () => {

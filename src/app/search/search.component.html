@@ -38,7 +38,7 @@
       type="submit"
       color="primary"
       (click)="doSearch()">
-      <span *ngIf="!(searching$ | async); else spinnner">Draw</span>
+      <span *ngIf="(searching$ | async) === false; else spinnner">Draw</span>
       <ng-template #spinnner>
         <mat-spinner
           class="spinner"
