@@ -1,18 +1,22 @@
-<div>
-  <span *ngFor="let line of shape">
-    <mat-icon *ngFor="let pixel of line"
+<ng-container *ngIf="shape$ | async as shape">
+  <div class="icon-picker">
+    <span>Pick an icon:</span>
+    <mat-icon *ngFor="let icon of icons"
       color="primary"
-      [ngClass]="{'hidden': isBlank(pixel)}">
-      {{draw(pixel)}}
+      (click)="selectIcon(icon)">
+      {{icon}}
     </mat-icon>
-    <br/>
-  </span>
-</div>
-<div class="icon-picker">
-  <span>Pick an icon:</span>
-  <mat-icon *ngFor="let icon of icons"
-    color="primary"
-    (click)="selectIcon(icon)">
-    {{icon}}
-  </mat-icon>
-</div>
+  </div>
+  <div>
+    <span *ngFor="let line of shape">
+      <mat-icon *ngFor="let pixel of line"
+        color="primary"
+        [ngClass]="{'hidden': isBlank(pixel)}">
+        {{draw(pixel)}}
+      </mat-icon>
+      <br/>
+    </span>
+  </div>
+</ng-container>
+
+<mat-spinner></mat-spinner>

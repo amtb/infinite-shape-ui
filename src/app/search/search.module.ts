@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule, MatProgressSpinnerModule } from '@angular/material';
 import { SearchComponent } from './search.component';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { SearchComponent } from './search.component';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ]
 })
 export class SearchModule { }

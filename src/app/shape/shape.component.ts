@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Pixels, Shape } from '../../models';
+import { StoreService } from '../../store';
 
 @Component({
   selector: 'app-shape',
@@ -9,13 +11,19 @@ import { Pixels, Shape } from '../../models';
 })
 export class ShapeComponent {
 
-  @Input()
-  shape: Shape;
+  shape$: Observable<Shape>;
 
   icons: string[] =  ['view_stream', 'waves', 'link', 'favorite', 'grade', 'fingerprint'];
 
   selectedIcon = 'favorite';
 
+  constructor(store: StoreService) {
+    this.shape$ = store.shape$;
+  }
+
+  /**
+   * checks if a pixel is a space
+   */
   isBlank(pixel: Pixels): boolean {
     return pixel === Pixels.Spaces;
   }
