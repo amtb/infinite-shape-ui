@@ -13,8 +13,8 @@ jobs:
       run: yarn
     - name: Lint and test
       run: |
-        yarn run lint
-        # yarn run test
+        yarn lint
+        yarn test --runInBand
     - name: Builds
       run: |
         yarn run build --prod
