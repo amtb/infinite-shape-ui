@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material';
 import { ShapeComponent } from './shape.component';
 
+export const importedModules = [
+  MatIconModule
+];
+
 @NgModule({
   declarations: [ShapeComponent],
   exports: [ShapeComponent],
   imports: [
     CommonModule,
-    MatIconModule
+    ...importedModules
   ]
 })
 export class ShapeModule { }
