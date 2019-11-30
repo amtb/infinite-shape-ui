@@ -11,12 +11,6 @@
     "deploy": "ng deploy"
   },
   "private": true,
-  "jest": {
-    "preset": "jest-preset-angular",
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/test.ts"
-    ]
-  },
   "dependencies": {
     "@angular/animations": "~8.2.14",
     "@angular/cdk": "~8.2.3",
