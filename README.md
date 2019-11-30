@@ -1,4 +1,4 @@
-# InfiniteShapeUi
+# Infinite Shape UI
 
 UI is available at https://amtb.github.io/infinite-shape-ui/
 
@@ -16,7 +16,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `yarn test` or `yarn jest` to execute the unit tests via [Jest](https://jestjs.io/).
+
+Use `--watch` to run the tests in watch mode.
 
 ## Running end-to-end tests
 
